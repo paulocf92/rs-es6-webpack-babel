@@ -1,4 +1,5 @@
 import api from './api';
+import { AST_True } from 'terser';
 
 class App {
   constructor() {
@@ -15,6 +16,18 @@ class App {
     this.formEl.onsubmit = event => this.addRepository(event);
   }
 
+  setLoading(loading = true) {
+    if (loading === true) {
+      let loadingEl = document.createElement('span');
+      loadingEl.appendChild(document.createTextNode('Carregando'));
+      loadingEl.setAttribute('id', 'loading');
+
+      this.formEl.appendChild(loadingEl);
+    } else {
+      document.getElementById('loading').remove();
+    }
+  }
+
   async addRepository(event) {
     event.preventDefault();
 
@@ -23,6 +36,8 @@ class App {
     if (repoInput.length === 0)
       return;
     
+    this.setLoading();
+
     try {
       const response = await api.get(`/repos/${repoInput}`); // Test: octocat/Hello-World
 
@@ -41,6 +56,8 @@ class App {
     } catch (err) {
       alert('O repositório não existe!');
     }
+
+    this.setLoading(false);
   }
 
   render() {

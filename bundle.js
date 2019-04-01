@@ -86,14 +86,27 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./funcoes.js":
+/*!********************!*\
+  !*** ./funcoes.js ***!
+  \********************/
+/*! exports provided: soma, sub */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"soma\", function() { return soma; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sub\", function() { return sub; });\nfunction soma(a, b) {\n  return a + b;\n}\nfunction sub(a, b) {\n  return a - b;\n}\n\n//# sourceURL=webpack:///./funcoes.js?");
+
+/***/ }),
+
 /***/ "./main.js":
 /*!*****************!*\
   !*** ./main.js ***!
   \*****************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("var arr = [1, 8, 3, 29, 4, 72, 0, 4, 44];\nvar maior = arr.reduce(function (total, next) {\n  return total > next ? total : next;\n}); //console.log(maior);\n\nvar showMsg = function showMsg(_) {\n  return 'Teste!!!';\n}; //console.log(showMsg());\n\n\nvar usuario = {\n  nome: 'Paulo',\n  idade: 27,\n  endereco: {\n    cidade: 'Dourados',\n    estado: 'MS'\n  }\n}; //console.log(usuario);\n\nvar nome = usuario.nome,\n    idade = usuario.idade,\n    cidade = usuario.endereco.cidade; //console.log(nome, idade, cidade);\n\nfunction mostraDados(_ref) {\n  var nome = _ref.nome,\n      idade = _ref.idade;\n  console.log(nome, idade);\n}\n\nmostraDados(usuario);\nvar arr1 = [1, 2, 7, 23, 22];\nvar newArr = [77, 22].concat(arr1); //console.log(newArr);\n\nvar name = 'Paul';\nvar age = 27;\nvar user = {\n  name: name,\n  age: age,\n  company: 'RocketSeat'\n}; //console.log(user);\n\n//# sourceURL=webpack:///./main.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _funcoes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./funcoes */ \"./funcoes.js\");\nvar arr = [1, 8, 3, 29, 4, 72, 0, 4, 44];\nvar maior = arr.reduce(function (total, next) {\n  return total > next ? total : next;\n}); //console.log(maior);\n\nvar showMsg = function showMsg(_) {\n  return 'Teste!!!';\n}; //console.log(showMsg());\n\n\nvar usuario = {\n  nome: 'Paulo',\n  idade: 27,\n  endereco: {\n    cidade: 'Dourados',\n    estado: 'MS'\n  }\n}; //console.log(usuario);\n\nvar nome = usuario.nome,\n    idade = usuario.idade,\n    cidade = usuario.endereco.cidade; //console.log(nome, idade, cidade);\n\nfunction mostraDados(_ref) {\n  var nome = _ref.nome,\n      idade = _ref.idade;\n  console.log(nome, idade);\n} //mostraDados(usuario);\n\n\nvar arr1 = [1, 2, 7, 23, 22];\nvar newArr = [77, 22].concat(arr1); //console.log(newArr);\n\nvar name = 'Paul';\nvar age = 27;\nvar user = {\n  name: name,\n  age: age,\n  company: 'RocketSeat'\n}; //console.log(user);\n// import { soma } from './funcoes';\n// import soma from './soma';\n\n\nconsole.log(_funcoes__WEBPACK_IMPORTED_MODULE_0__);\nconsole.log(_funcoes__WEBPACK_IMPORTED_MODULE_0__[\"soma\"](1, 2));\n\n//# sourceURL=webpack:///./main.js?");
 
 /***/ })
 

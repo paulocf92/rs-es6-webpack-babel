@@ -27,7 +27,7 @@ function mostraDados({ nome, idade }) {
   console.log(nome, idade)
 }
 
-mostraDados(usuario);
+//mostraDados(usuario);
 
 const arr1 = [1, 2, 7, 23, 22];
 
@@ -45,3 +45,10 @@ const user = {
 };
 
 //console.log(user);
+
+// import { soma } from './funcoes';
+// import soma from './soma';
+import * as funcoes from './funcoes';
+
+console.log(funcoes);
+console.log(funcoes.soma(1, 2));
